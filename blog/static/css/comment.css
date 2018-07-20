@@ -7,6 +7,7 @@
 
 .noComment{
     margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 #commentWrap{
@@ -15,4 +16,8 @@
 
 .commentC{
   margin:10px 0;
+}
+
+.noCommentB{
+  margin-bottom: 50px;
 }

@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-
+from django.db import models
 
 class Post(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
@@ -10,7 +10,8 @@ class Post(models.Model):
             default=timezone.now)
     published_date = models.DateTimeField(
             blank=True, null=True)
-
+    thumb = models.ImageField(default="default.jpg",blank=True)
+    
     def publish(self):
         self.published_date = timezone.now()
         self.save()
